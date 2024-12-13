@@ -29,7 +29,7 @@ def calculadora_v2(num1: float, num2: float, operador: str) -> float:
     num2 : float
         Segundo operador.
     operador : str
-        Operador da operacão. e34rt5vh n-
+        Operador da operacão.
         Pode ser "+", "-", "*" o "/".
 
     Returns
@@ -70,6 +70,22 @@ def calculadora_v3(num1: float, num2: float, operador: str) -> float:
         return operadores[operador](num1, num2)
 
     return float("nan")
+
+# esta versão quando tentamos o expoente de 0, ele retorna um erro
+def calculadora_v4(num1: float, num2: float, operador: str) -> float:
+    if num2 == 0 and operador in ['/', '%']:
+        return float("nan")
+
+    operacoes = {
+        "+": num1 + num2,
+        "-": num1 - num2,
+        "*": num1 * num2,
+        "/": num1 / num2,
+        "%": num1 % num2,
+        "^": num1 ** num2
+    }
+
+    return operacoes.get(operador, float("nan"))
 
 
 if __name__ == "__main__":
