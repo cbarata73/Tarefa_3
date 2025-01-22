@@ -20,28 +20,6 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     return result
 
 def calculadora_v2(num1: float, num2: float, operador: str) -> float:
-    """Calcula o resultado de uma operação matematica básica.
-
-    Parametros
-    ----------
-    num1 : float
-        Primeiro operador.
-    num2 : float
-        Segundo operador.
-    operador : str
-        Operador da operacão.
-        Pode ser "+", "-", "*" o "/".
-
-    Returns
-    -------
-    float
-        Resultado da operação.
-
-    Raises
-    ------
-    ValueError
-        Se o operador não for "+", "-", "*" ou "/".
-    """
     operacoes = {
         "+": lambda: num1 + num2,
         "-": lambda: num1 - num2,
@@ -98,7 +76,7 @@ if __name__ == "__main__":
             numero1: float = float(input('Introduza o primeiro número:'))
             numero2: float = float(input('Introduza o segundo número:'))
             operacao: str = input('Introduza a operação a realizar (+ - / *) ou (% ^):')
-            print(f'O resultado: {calculadora_v2(numero1, numero2, operacao)}')
+            print(f'O resultado: {calculadora(numero1, numero2, operacao)}')
             print()
             cont: str = input('Deseja continuar? (s/n):').lower()
             if cont == 'n':
