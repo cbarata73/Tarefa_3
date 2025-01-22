@@ -17,27 +17,27 @@ class TestCalculadoraV2(unittest.TestCase):
         self.assertEqual(calculadora_v2(0, 0, "-"), 0)
         self.assertEqual(calculadora_v2(2.5, 1.5, "-"), 1.0)
 
-    # def test_multiplicacao(self):
-    #     """Testa a operação de multiplicação"""
+    def test_multiplicacao(self):
+        """Testa a operação de multiplicação"""
 
-    # def test_divisao(self):
-    #     """Testa a operação de divisão"""
-    #     self.assertEqual(calculadora_v2(6, 2, "/"), 3)
+    def test_divisao(self):
+        """Testa a operação de divisão"""
+        self.assertEqual(calculadora_v2(6, 2, "/"), 3)
 
-    #     # Teste de divisão por zero deve lançar ZeroDivisionError
-    #     with self.assertRaises(ZeroDivisionError):
-    #         calculadora_v2(5, 0, "/")
+        # Teste de divisão por zero deve lançar ZeroDivisionError
+        with self.assertRaises(ZeroDivisionError):
+            calculadora_v2(5, 0, "/")
 
-    # def test_modulo(self):
-    #     """Testa a operação de módulo"""
-    #     self.assertEqual(calculadora_v2(7, 3, "%"), 1)
+    def test_modulo(self):
+        """Testa a operação de módulo"""
+        self.assertEqual(calculadora_v2(7, 3, "%"), 1)
 
-    #     # Teste de módulo por zero deve lançar ZeroDivisionError
-    #     with self.assertRaises(ZeroDivisionError):
-    #         calculadora_v2(5, 0, "%")
+        # Teste de módulo por zero deve lançar ZeroDivisionError
+        with self.assertRaises(ZeroDivisionError):
+            calculadora_v2(5, 0, "%")
 
-    # def test_potencia(self):
-    #     """Testa a operação de potência"""
+    def test_potencia(self):
+        """Testa a operação de potência"""
 
     def test_operador_invalido(self):
         """Testa operador inválido"""
@@ -48,4 +48,4 @@ class TestCalculadoraV2(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-# para correr os testes: python -m unittest -v test_calculadora_alunos.py
+# para correr os testes: python -m unittest -v testar_calculadora_alunos.py
