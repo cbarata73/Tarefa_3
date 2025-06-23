@@ -27,7 +27,7 @@ def obter_resposta(texto: str) -> str:
         'como te chamas': 'O meu nome é: Bot :)',
         'tempo': 'Está um dia de sol!',
         ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
-        'historia de portugal': 'Portugal tem uma rica história...',
+        'historia de portugal': 'Portugal tem uma rica história...'
     }
 
     for chave, resposta in respostas.items():
